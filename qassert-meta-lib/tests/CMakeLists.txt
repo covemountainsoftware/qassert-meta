@@ -9,10 +9,10 @@ else()
     message(STATUS "Found CppUTest version ${CPPUTEST_VERSION}")
 endif()
 
-set(TEST_APP_NAME qassert-meta-tests)
+set(TEST_APP_NAME qassert-meta-lib-tests)
 set(TEST_SOURCES
         main.cpp
-        qassert-meta-tests.cpp
+        qassert-meta-lib-tests.cpp
 )
 
 include_directories(${CPPUTEST_INCLUDE_DIRS})
