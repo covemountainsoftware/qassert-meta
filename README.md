@@ -5,7 +5,7 @@ various internal QP Q_ASSERT ids encountered when developing an application for 
 
 Use this module in your firmware to get a handy debug print output (when available)
 indicating the reason for the assert and possible meta/higher level guidance
-on how to fix or avoid the assert.
+on how to resolve the assert.
 
 Or, if the firmware has no means to print such information from within
 an assert, just keep this repository handy and manually search the internal
