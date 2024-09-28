@@ -16,13 +16,13 @@ TEST(qassert_meta_lib_tests, can_compile)
 {
 }
 
-TEST(qassert_meta_lib_tests, basic_description_returns_false_if_unknown_qassert)
+TEST(qassert_meta_lib_tests, description_returns_false_if_unknown_qassert)
 {
     QAssertMetaDescription description;
     CHECK_FALSE(QAssertMetaGetDescription("gobble", 123456, &description));
 }
 
-TEST(qassert_meta_lib_tests, users_can_register_callback_for_unknown_asserts)
+TEST(qassert_meta_lib_tests, can_register_callback_for_unknown_asserts)
 {
     constexpr const char * TEST_UNKNOWN_MODULE = "gobble";
     constexpr int TEST_UNKNOWN_ID = 123456;
@@ -45,7 +45,7 @@ TEST(qassert_meta_lib_tests, users_can_register_callback_for_unknown_asserts)
     CHECK_EQUAL(TEST_UNKNOWN_ID, callbackId);
 }
 
-TEST(qassert_meta_lib_tests, unknown_callback_if_true_then_returns_true_and_output_reflects_callback)
+TEST(qassert_meta_lib_tests, unknown_callback_if_true_then_returns_true_and_output_reflects_callback_changes)
 {
     constexpr const char * TEST_EXTENDED_MODULE = "extended";
     constexpr int TEST_EXTENDED_ID = 1;
