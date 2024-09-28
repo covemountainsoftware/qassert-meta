@@ -121,9 +121,43 @@ static InternalMeta m_internal[] = {
     {
         "qf_actq", 400,
         {
-            "Returns the minimum of free queue entries of a target active object, using the priority as the key.",
+            "QF_getQueueMin, an error related to the selected priority input parameter.",
             "Most likely, a currently unused priority was queried.",
             "https://www.state-machine.com/qpc/class_q_f.html#a29692c0dcab731199b5beb5847484ab7"
+        }
+    },
+    {
+        "qep_hsm", 200,
+        {
+            "QHsm init failure.",
+            "A setup of the target HSM was not completed correctly,\n"
+            "or the HSM's init was executed more than once.",
+            "https://www.state-machine.com/qpc/struct_q_hsm.html#ae69df28aa99b6f9db31a0499e5a52622"
+        }
+    },
+    {
+        "qep_hsm", 210,
+        {
+            "QHsm init failure in the initial transition.",
+            "The custom initial transition failed to transition to a state,\n."
+            "i.e. use Q_TRAN(...) in the HSM's initial state.",
+            "https://www.state-machine.com/qpc/struct_q_hsm.html#ae69df28aa99b6f9db31a0499e5a52622"
+        }
+    },
+    {
+        "qep_hsm", 220,
+        {
+            "QHsm init failure in the initial transition, could not reach initial destination state.",
+            "The HSM state nesting may be too deep or is malformed in some manner.",
+            "https://www.state-machine.com/qpc/struct_q_hsm.html#ae69df28aa99b6f9db31a0499e5a52622"
+        }
+    },
+    {
+        "qep_hsm", 290,
+        {
+            "QHsm init failure in the initial transition, could not reach initial destination state.",
+            "The HSM state nesting may be too deep or is malformed in some manner.",
+            "https://www.state-machine.com/qpc/struct_q_hsm.html#ae69df28aa99b6f9db31a0499e5a52622"
         }
     },
     //List terminating structure, keep last.
