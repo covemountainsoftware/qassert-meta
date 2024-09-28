@@ -60,7 +60,7 @@ TEST(qassert_meta_lib_tests, unknown_callback_if_true_then_returns_true_and_outp
     auto testCallback = [](const char * module, int id, QAssertMetaDescription* output){
         (void)module;
         (void)id;
-        output->short_description = SHORT_DESC;
+        output->brief = SHORT_DESC;
         output->tips = TIPS;
         output->url = nullptr;
         return true;
@@ -71,7 +71,17 @@ TEST(qassert_meta_lib_tests, unknown_callback_if_true_then_returns_true_and_outp
             TEST_EXTENDED_MODULE, TEST_EXTENDED_ID, &description);
 
     CHECK_TRUE(ok);
-    STRCMP_EQUAL(SHORT_DESC, description.short_description);
+    STRCMP_EQUAL(SHORT_DESC, description.brief);
     STRCMP_EQUAL(TIPS, description.tips);
     CHECK_EQUAL(nullptr, description.url);
+}
+
+TEST(qassert_meta_lib_tests, if_qassert_is_known_returns_true_and_description_is_filled)
+{
+    QAssertMetaDescription description = {nullptr, nullptr, nullptr};
+    CHECK_TRUE(QAssertMetaGetDescription("qf_actq", 110, &description));
+
+    CHECK_TRUE(description.url != nullptr);
+    CHECK_TRUE(description.tips != nullptr);
+    CHECK_TRUE(description.brief != nullptr);
 }

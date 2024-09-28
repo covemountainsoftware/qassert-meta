@@ -11,9 +11,9 @@ extern "C" {
  *   QASSERT Meta Description output structure.
  */
 typedef struct {
-    const char * short_description; //short description of the QASSERT
-    const char * tips;              //detailed tips regarding this QASSERT, if available.
-    const char * url;               //a URL for more, if available.
+    const char * brief; //short description of the QASSERT
+    const char * tips;  //detailed tips regarding this QASSERT, if available.
+    const char * url;   //a URL for more, if available.
 } QAssertMetaDescription;
 
 //typedef for a callback that may be used to extend this module
