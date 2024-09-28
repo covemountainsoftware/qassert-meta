@@ -7,22 +7,28 @@
 extern "C" {
 #endif
 
+/**
+ *   QASSERT Meta Description output structure.
+ */
 typedef struct {
-    const char * short_description;
-    const char * tips;
-    const char * url;
+    const char * short_description; //short description of the QASSERT
+    const char * tips;              //detailed tips regarding this QASSERT, if available.
+    const char * url;               //a URL for more, if available.
 } QAssertMetaDescription;
+
+//typedef for a callback that may be used to extend this module
+//to provide Meta for application or other QASSERT sources
+typedef bool (*UnknownQAssertCallback)(const char * module, int id, QAssertMetaDescription* output);
 
 /**
  * Initialize the QAssertMeta module.
  */
 void QAssertMetaInit(void);
 
-typedef bool (*UnknownQAssertCallback)(const char * module, int id, QAssertMetaDescription* output);
 /**
- * Register a callback to be executed if a GetDescription if called
+ * Register a callback to be executed if GetDescription is called
  * and the module/id pair is found to be unknown.
- * @param callback:  the callback the module will record
+ * @param callback:  the callback
  */
 void QAssertMetaRegisterUnknownCallback(UnknownQAssertCallback callback);
 
