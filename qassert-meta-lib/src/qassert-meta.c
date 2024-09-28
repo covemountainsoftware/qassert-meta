@@ -54,17 +54,32 @@ bool QAssertMetaGetDescription(const char * module, int id, QAssertMetaDescripti
     return found;
 }
 
+static const char * const QPC_URL_QACTIVE_POST =
+        "https://www.state-machine.com/qpc/struct_q_active.html#a1a81b9fd06d9c0aa5dea32d194f0552b";
+
 static InternalMeta m_internal[] = {
     {
-        "qf_actq", 110,
+        "qf_actq", 102,
+        {
+            "The event being posted is either null, invalid, or corrupt.",
+            "This typically means the event pointer was improperly retained\n"
+            "after the event was returned to its event pool,\n"
+            "i.e. used after the event was garbage collected.",
+            QPC_URL_QACTIVE_POST
+        }
+    },
+    {
+        "qf_actq", 190,
         {
             "Target active object's queue is full.",
             "If posting an event to an active object using QF_NO_MARGIN, and the target queue is full,\n"
             "this assert will occur. The target AO might be overloaded OR a higher priority AO might\n"
-            "be preventing this AO from executing.\n",
-            "https://www.state-machine.com/qpc/struct_q_active.html#a1a81b9fd06d9c0aa5dea32d194f0552b"
+            "be preventing this AO from executing.\n"
+            "Note: 2024 online documentation refers to this as qf_actq:110",
+            QPC_URL_QACTIVE_POST
         }
     },
+
     //keep this last, terminating structure
     {
         NULL, -1, {NULL, NULL, NULL}

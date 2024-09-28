@@ -79,7 +79,7 @@ TEST(qassert_meta_lib_tests, unknown_callback_if_true_then_returns_true_and_outp
 TEST(qassert_meta_lib_tests, if_qassert_is_known_returns_true_and_description_is_filled)
 {
     QAssertMetaDescription description = {nullptr, nullptr, nullptr};
-    CHECK_TRUE(QAssertMetaGetDescription("qf_actq", 110, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_actq", 102, &description));
 
     CHECK_TRUE(description.url != nullptr);
     CHECK_TRUE(description.tips != nullptr);
