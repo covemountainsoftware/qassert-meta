@@ -22,6 +22,11 @@ TEST(qassert_meta_lib_tests, description_returns_false_if_unknown_qassert)
     CHECK_FALSE(QAssertMetaGetDescription("gobble", 123456, &description));
 }
 
+TEST(qassert_meta_lib_tests, description_returns_false_if_output_param_is_null)
+{
+    CHECK_FALSE(QAssertMetaGetDescription("qf_actq", 102, nullptr));
+}
+
 TEST(qassert_meta_lib_tests, can_register_callback_for_unknown_asserts)
 {
     constexpr const char * TEST_UNKNOWN_MODULE = "gobble";

@@ -15,7 +15,13 @@ void QAssertMetaRegisterUnknownCallback(UnknownQAssertCallback callback)
 
 bool QAssertMetaGetDescription(const char * module, int id, QAssertMetaDescription* output)
 {
+    if ((NULL == output) || (NULL == module))
+    {
+        return false;
+    }
+
     bool found = false;
+
     //TODO: search internal for matching module/id pair
 
     if ((!found) && (m_unknown_callback != NULL))
