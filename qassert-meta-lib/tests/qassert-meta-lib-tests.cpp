@@ -85,3 +85,21 @@ TEST(qassert_meta_lib_tests, if_qassert_is_known_returns_true_and_description_is
     CHECK_TRUE(description.tips != nullptr);
     CHECK_TRUE(description.brief != nullptr);
 }
+
+TEST(qassert_meta_lib_tests, list_of_internal_qassert_supported)
+{
+    // Check (list) each internal module/id combo.
+    // Not confirming the output descriptions.
+    QAssertMetaDescription description = {nullptr, nullptr, nullptr};
+    CHECK_TRUE(QAssertMetaGetDescription("qf_actq", 102, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_actq", 190, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_actq", 202, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_actq", 201, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_actq", 310, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_actq", 400, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qep_hsm", 200, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qep_hsm", 210, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qep_hsm", 220, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qep_hsm", 290, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_defer", 210, &description));
+}
