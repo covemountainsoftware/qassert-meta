@@ -241,6 +241,63 @@ static InternalMeta m_internal[] = {
             "https://www.state-machine.com/qpc/class_q_f.html#aebb373ddc448c4198e4247b6c6ff3e69"
         }
     },
+    {
+        "qf_mem", 100,
+        {
+            "QPPool_init(...) parameters failed validation.",
+            "Check the pool size and ensure that at least one free block will fit,\n"
+            "otherwise, see the documentation at the URL.",
+            "https://www.state-machine.com/qpc/struct_q_m_pool.html#a477cb6d8f27af8db6cf6a155b331d996"
+        }
+    },
+    {
+        "qf_mem", 110,
+        {
+            "QPPool_init(...) parameters failed validation.",
+            "The desired pool size must allow for at least one rounded up block.",
+            "https://www.state-machine.com/qpc/struct_q_m_pool.html#a477cb6d8f27af8db6cf6a155b331d996"
+        }
+    },
+    {
+        "qf_mem", 300,
+        {
+            "QMPool_get(...) internal integrity check failure.",
+            "Check for memory corruption related to objects allocated from or near this pool.",
+            "https://www.state-machine.com/qpc/struct_q_m_pool.html#a312e8c7ec9a9a751578248f3ef3847ff"
+        }
+    },
+    {
+        "qf_mem", 302,
+        {
+            "QMPool_get(...) internal integrity check failure.",
+            "Check for memory corruption related to objects allocated from or near this pool.",
+            "https://www.state-machine.com/qpc/struct_q_m_pool.html#a312e8c7ec9a9a751578248f3ef3847ff"
+        }
+    },
+    {
+        "qf_mem", 320,
+        {
+            "QMPool_get(...) internal integrity check failure upon becoming empty.",
+            "Check for memory corruption related to objects allocated from or near this pool.",
+            "https://www.state-machine.com/qpc/struct_q_m_pool.html#a312e8c7ec9a9a751578248f3ef3847ff"
+        }
+    },
+    {
+        "qf_mem", 330,
+        {
+            "QMPool_get(...) internal integrity check failure when not empty.",
+            "Check for memory corruption related to objects allocated from or near this pool.",
+            "https://www.state-machine.com/qpc/struct_q_m_pool.html#a312e8c7ec9a9a751578248f3ef3847ff"
+        }
+    },
+    {
+        "qf_mem", 200,
+        {
+            "QMPool_put(...) failed internal integrity check.",
+            "Check for memory corruption related to objects allocated from or near this pool.",
+            "https://www.state-machine.com/qpc/struct_q_m_pool.html#a2fc0921a76c70b107e9f495a37c02681"
+        }
+    },
     //List terminating structure, keep last.
     {
         NULL, -1, {NULL, NULL, NULL}
