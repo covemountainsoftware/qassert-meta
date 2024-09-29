@@ -160,12 +160,85 @@ static InternalMeta m_internal[] = {
             "https://www.state-machine.com/qpc/struct_q_hsm.html#ae69df28aa99b6f9db31a0499e5a52622"
         }
     },
-     {
+    {
         "qf_defer", 210,
         {
             "The recalled deferred event must meet reference counter expectations.",
             "Stomping on memory?",
             "https://www.state-machine.com/qpc/struct_q_active.html#a7a942dbe8981c0a6f85550a7dbb841be"
+        }
+    },
+    {
+        "qf_dyn", 200,
+        {
+            "Call to pollInit(...) exceeds the configured maximum.",
+            "See QF_MAX_EPOOL. But do you really need more pools?",
+            "https://www.state-machine.com/qpc/class_q_f.html#a1c4fc5636c2bc2e9d47e958aac05b8e1"
+        }
+    },
+    {
+        "qf_dyn", 201,
+        {
+            "Each pool initialized by pollInit(...) must be initialized in increasing event size.",
+            "Check the size of parameters used to initialize the pools and ensure they are\n"
+            "sized as expected and in increasing size.",
+            "https://www.state-machine.com/qpc/class_q_f.html#a1c4fc5636c2bc2e9d47e958aac05b8e1"
+        }
+    },
+    {
+        "qf_dyn", 400,
+        {
+            "Call to getPoolMin(...) with invalid pool number.",
+            "Typo? Bad code? Forgot to initialize the pool?",
+            "https://www.state-machine.com/qpc/class_q_f.html#a92f6caf14f52d95b7d8bfc39d1656fe3"
+        }
+    },
+    {
+        "qf_dyn", 300,
+        {
+            "Attempting to allocate an event that is larger than any available pool.",
+            "Probably need to increase the event size of the largest event pool.",
+            "https://www.state-machine.com/qpc/class_q_f.html#ad3bc25ebbfc2c2c433f8762a77136366"
+        }
+    },
+    {
+        "qf_dyn", 320,
+        {
+            "Event allocation failed with QF_NO_MARGIN.",
+            "There is likely an event leak or excessive deferral of events.",
+            "https://www.state-machine.com/qpc/class_q_f.html#ad3bc25ebbfc2c2c433f8762a77136366"
+        }
+    },
+    {
+        "qf_dyn", 402,
+        {
+            "Event verification within garbage collection failed.",
+            "Check for memory corruption or stale event pointer being reused incorrectly.",
+            "https://www.state-machine.com/qpc/class_q_f.html#a7aa4e9d39b8af089405cb829e2cc5a24"
+        }
+    },
+    {
+        "qf_dyn", 410,
+        {
+            "Event's pool number was invalid.",
+            "Check for memory corruption of event related data.",
+            "https://www.state-machine.com/qpc/class_q_f.html#a7aa4e9d39b8af089405cb829e2cc5a24"
+        }
+    },
+    {
+        "qf_dyn", 502,
+        {
+            "While creating a new reference, an event failed verification.",
+            "Check for memory corruption or stale event pointer being reused incorrectly.",
+            "https://www.state-machine.com/qpc/class_q_f.html#aee4449d368362c7fc1d1ddc258027d53"
+        }
+    },
+    {
+        "qf_dyn", 602,
+        {
+            "While deleting an event reference, an event failed verification.",
+            "Check for memory corruption or stale event pointer being reused incorrectly.",
+            "https://www.state-machine.com/qpc/class_q_f.html#aebb373ddc448c4198e4247b6c6ff3e69"
         }
     },
     //List terminating structure, keep last.

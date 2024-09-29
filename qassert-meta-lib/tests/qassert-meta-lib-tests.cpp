@@ -102,4 +102,16 @@ TEST(qassert_meta_lib_tests, list_of_internal_qassert_supported)
     CHECK_TRUE(QAssertMetaGetDescription("qep_hsm", 220, &description));
     CHECK_TRUE(QAssertMetaGetDescription("qep_hsm", 290, &description));
     CHECK_TRUE(QAssertMetaGetDescription("qf_defer", 210, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_dyn", 200, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_dyn", 201, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_dyn", 400, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_dyn", 300, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_dyn", 320, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_dyn", 402, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_dyn", 410, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_dyn", 502, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_dyn", 602, &description));
+
+
+
 }
