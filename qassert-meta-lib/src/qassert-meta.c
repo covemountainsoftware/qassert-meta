@@ -160,6 +160,14 @@ static InternalMeta m_internal[] = {
             "https://www.state-machine.com/qpc/struct_q_hsm.html#ae69df28aa99b6f9db31a0499e5a52622"
         }
     },
+     {
+        "qf_defer", 210,
+        {
+            "The recalled deferred event must meet reference counter expectations.",
+            "Stomping on memory?",
+            "https://www.state-machine.com/qpc/struct_q_active.html#a7a942dbe8981c0a6f85550a7dbb841be"
+        }
+    },
     //List terminating structure, keep last.
     {
         NULL, -1, {NULL, NULL, NULL}
