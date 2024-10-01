@@ -411,6 +411,37 @@ static InternalMeta m_internal[] = {
             "https://www.state-machine.com/qpc/struct_q_active.html#aec64ea18ec1909aa5ce20ca1c154bea4"
         }
     },
+    {
+        "qf_qact", 100,
+        {
+            "QActive register(...) failed one or more of input argument checks.",
+            "Specifically:\n"
+            "  - The AO priority must be within the configured range.\n"
+            "  - The AO priority must not be in use already.\n"
+            "  - The AO priority must not exceed the preemption threshold.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#abe6de335bea204db67cbd96fbb988f2b"
+        }
+    },
+    {
+        "qf_qact", 190,
+        {
+            "QActive register(...) failed one or more post-condition checks.",
+            "Specifically:\n"
+            "  - The preceding preemption threshold must not exceed this AO's preemption threshold.\n"
+            "  - The preemption threshold must not exceed the next preemption threshold.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#abe6de335bea204db67cbd96fbb988f2b"
+        }
+    },
+    {
+        "qf_qact", 200,
+        {
+            "QActive unregister(...) failed one or more input argument checks.",
+            "Specifically:\n"
+            "  - The AO priority must be within the configured range.\n"
+            "  - The priority must have been already registered.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#a16aba45c83211a8edc065662345e8a8e"
+        }
+    },
     //List terminating structure, keep last.
     {
         NULL, -1, {NULL, NULL, NULL}

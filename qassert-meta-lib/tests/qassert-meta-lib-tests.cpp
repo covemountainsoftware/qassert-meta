@@ -150,4 +150,8 @@ TEST(qassert_meta_lib_tests, list_of_internal_qassert_supported)
     CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 400, &description));
     CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 402, &description));
     CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 500, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_qact", 100, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_qact", 190, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_qact", 200, &description));
+
 }
