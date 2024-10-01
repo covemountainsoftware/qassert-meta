@@ -320,6 +320,97 @@ static InternalMeta m_internal[] = {
             "https://www.state-machine.com/qpc/struct_q_m_pool.html#a2fc0921a76c70b107e9f495a37c02681"
         }
     },
+    {
+        "qf_ps", 200,
+        {
+            "Attempt to publish an event with a signal outside the configured pub/sub signal range.",
+            "Is this an event that would normally be posted directly or needs to be added to the\n"
+            "master publish/subscribe signal enum?",
+            "https://www.state-machine.com/qpc/struct_q_active.html#a892d39d181cc0f0b053669d6b7c5b4bb"
+        }
+    },
+    {
+        "qf_ps", 202,
+        {
+            "publish(...) failed an internal integrity check.",
+            "Likely memory corruption.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#a892d39d181cc0f0b053669d6b7c5b4bb"
+        }
+    },
+    {
+        "qf_ps", 210,
+        {
+            "publish(...) failed an internal integrity check, where the AO\n"
+            "found was (somehow) not registered with the framework.",
+            "Likely memory corruption.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#a892d39d181cc0f0b053669d6b7c5b4bb"
+        }
+    },
+    {
+        "qf_ps", 220,
+        {
+            "publish(...) failed an internal integrity check, where a subsequent AO\n"
+            "found was (somehow) not registered with the framework.",
+            "Likely memory corruption.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#a892d39d181cc0f0b053669d6b7c5b4bb"
+        }
+    },
+    {
+        "qf_ps", 290,
+        {
+            "publish(...) failed an internal integrity check.",
+            "Likely memory corruption.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#a892d39d181cc0f0b053669d6b7c5b4bb"
+        }
+    },
+    {
+        "qf_ps", 300,
+        {
+            "subscribe(...) failed one or more of multiple input and state checks.",
+            "Specifically:\n"
+            "  - The signal being subscribed to must be within the configured pub/sub signal range.\n"
+            "  - The subscriber AO priority must be within the configured range.\n"
+            "  - The AO must be registered with the framework.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#ae2510a52f1185e2561fa78323983c04d"
+        }
+    },
+    {
+        "qf_ps", 302,
+        {
+            "subscribe(...) failed an internal integrity check.",
+            "Likely memory corruption.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#ae2510a52f1185e2561fa78323983c04d"
+        }
+    },
+    {
+        "qf_ps", 400,
+        {
+            "unsubscribe(...) failed one or more of multiple input and state checks.",
+                "Specifically:\n"
+                "  - The signal being unsubscribed must be within the configured pub/sub signal range.\n"
+                "  - The AO priority must be within the configured range.\n"
+                "  - The AO must be registered with the framework.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#a0cf08b1345a60cb4cd2d580f448f819d"
+        }
+    },
+    {
+        "qf_ps", 402,
+        {
+            "unsubscribe(...) failed an internal integrity check.",
+            "Likely memory corruption.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#a0cf08b1345a60cb4cd2d580f448f819d"
+        }
+    },
+    {
+        "qf_ps", 500,
+        {
+            "unsubscribeAll(...) failed one or more of multiple input and state checks.",
+            "Specifically:\n"
+            "  - The AO priority must be within the configured range.\n"
+            "  - The AO must be registered with the framework.",
+            "https://www.state-machine.com/qpc/struct_q_active.html#aec64ea18ec1909aa5ce20ca1c154bea4"
+        }
+    },
     //List terminating structure, keep last.
     {
         NULL, -1, {NULL, NULL, NULL}

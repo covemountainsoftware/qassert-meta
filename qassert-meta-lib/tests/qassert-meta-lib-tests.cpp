@@ -140,6 +140,14 @@ TEST(qassert_meta_lib_tests, list_of_internal_qassert_supported)
     CHECK_TRUE(QAssertMetaGetDescription("qf_mem", 320, &description));
     CHECK_TRUE(QAssertMetaGetDescription("qf_mem", 330, &description));
     CHECK_TRUE(QAssertMetaGetDescription("qf_mem", 200, &description));
-
-
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 200, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 202, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 210, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 220, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 290, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 300, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 302, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 400, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 402, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_ps", 500, &description));
 }
