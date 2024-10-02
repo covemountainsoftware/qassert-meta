@@ -442,6 +442,42 @@ static InternalMeta m_internal[] = {
             "https://www.state-machine.com/qpc/struct_q_active.html#a16aba45c83211a8edc065662345e8a8e"
         }
     },
+    {
+        "qf_qeq", 200,
+        {
+            "QEQueue post(...), the provided event pointer is null.",
+            "Thou shalt not follow the null pointer!",
+            "https://www.state-machine.com/qpc/struct_q_e_queue.html#aef79dbd59331c61ec1591f7ca43b1280"
+        }
+    },
+    {
+        "qf_qeq", 210,
+        {
+            "QEQueue post(...), the queue is full and margin is QF_NO_MARGIN.",
+            "Double check priorities and thread behavior. A thread is generating too many events or\n"
+            "the thread servicing this queue is too slow, is being starved by a higher priority thread\n"
+            "or needs a deeper queue.",
+            "https://www.state-machine.com/qpc/struct_q_e_queue.html#aef79dbd59331c61ec1591f7ca43b1280"
+        }
+    },
+    {
+        "qf_qeq", 300,
+        {
+            "QEQueue postLIFO(...), the target queue is full.",
+            "Double check priorities and thread behavior. A thread is generating too many events or\n"
+            "the thread servicing this queue is too slow, is being starved by a higher priority thread\n"
+            "or needs a deeper queue.",
+            "https://www.state-machine.com/qpc/struct_q_e_queue.html#ab0c7a67307992567ffea4caf891a832a"
+        }
+    },
+    {
+        "qf_qeq", 410,
+        {
+            "QEQueue get(...), an internal integrity check failed.",
+            "Possible memory corruption?",
+            "https://www.state-machine.com/qpc/struct_q_e_queue.html#a55ae04e6f994d5016577ed4b342a8fbd"
+        }
+    },
     //List terminating structure, keep last.
     {
         NULL, -1, {NULL, NULL, NULL}

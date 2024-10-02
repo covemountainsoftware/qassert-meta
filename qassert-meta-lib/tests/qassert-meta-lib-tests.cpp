@@ -153,5 +153,11 @@ TEST(qassert_meta_lib_tests, list_of_internal_qassert_supported)
     CHECK_TRUE(QAssertMetaGetDescription("qf_qact", 100, &description));
     CHECK_TRUE(QAssertMetaGetDescription("qf_qact", 190, &description));
     CHECK_TRUE(QAssertMetaGetDescription("qf_qact", 200, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_qeq", 200, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_qeq", 210, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_qeq", 300, &description));
+    CHECK_TRUE(QAssertMetaGetDescription("qf_qeq", 410, &description));
+
+
 
 }
