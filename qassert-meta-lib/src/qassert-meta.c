@@ -478,6 +478,79 @@ static InternalMeta m_internal[] = {
             "https://www.state-machine.com/qpc/struct_q_e_queue.html#a55ae04e6f994d5016577ed4b342a8fbd"
         }
     },
+    {
+        "qf_time", 300,
+        {
+            "QTimeEvt ctor(...), invalid input parameter.",
+            "'sig' must not be zero and 'tickRate' must be within the configured range.",
+            "https://www.state-machine.com/qpc/struct_q_time_evt.html#a04b021eb5cf81f1d1700b9ce0afa37a9"
+        }
+    },
+    {
+        "qf_time", 400,
+        {
+            "QTimeEvt arm(...), invalid input parameter.",
+            "  The host AO must not be null.\n"
+            "  The time event must not be armed already.\n"
+            "  Ticks must not be zero.\n"
+            "  The signal value must be valid.",
+            "https://www.state-machine.com/qpc/struct_q_time_evt.html#a9bbcb00315fb8bb8641003b2b2d07ce4"
+        }
+    },
+    {
+        "qf_time", 600,
+        {
+            "QTimeEvt rearm(...), invalid input parameter.",
+            "  The host AO must not be null.\n"
+            "  The time event must not be armed already.\n"
+            "  Ticks must not be zero.\n"
+            "  The signal value must be valid.",
+            "https://www.state-machine.com/qpc/struct_q_time_evt.html#a3a5734e32caac22b89766a4b90a1679b"
+        }
+    },
+    {
+        "qf_time", 100,
+        {
+            "QTimeEvt tick(...), internal integrity failure.",
+            "Invalid 'tickRate' parameter. The function calling tick(...) should be examined.",
+            "https://www.state-machine.com/qpc/struct_q_time_evt.html#a4110381e712227678890d112edc28cf9"
+        }
+    },
+    {
+        "qf_time", 110,
+        {
+            "QTimeEvt tick(...), internal integrity failure.",
+            "An internal variable was unexpectedly null. Memory corruption?",
+            "https://www.state-machine.com/qpc/struct_q_time_evt.html#a4110381e712227678890d112edc28cf9"
+        }
+    },
+    {
+        "qf_time", 112,
+        {
+            "QTimeEvt tick(...), internal integrity failure.",
+            "A timer is firing, but the event to be posted is invalid.\n"
+            "Confirm that the event provided to the timer is valid, otherwise seek\n"
+            "out sources of memory corruption.",
+            "https://www.state-machine.com/qpc/struct_q_time_evt.html#a4110381e712227678890d112edc28cf9"
+        }
+    },
+    {
+        "qf_time", 190,
+        {
+            "QTimeEvt tick(...), internal timer loop limit hit.",
+            "There might be too many timers active in the system. Otherwise, seek\n"
+            "out sources of memory corruption.",
+            "https://www.state-machine.com/qpc/struct_q_time_evt.html#a4110381e712227678890d112edc28cf9"
+        }
+    },
+    {
+        "qf_time", 800,
+        {
+            "QTimeEvt noActive(...), input parameter failed sanity check.",
+            "The tickRate param must be within the configured range.",
+            "https://www.state-machine.com/qpc/struct_q_time_evt.html#a1c6b4144dd26a56d3c65a18bc3a9e640"
+        }
+    },
     //List terminating structure, keep last.
     {
         NULL, -1, {NULL, NULL, NULL}
