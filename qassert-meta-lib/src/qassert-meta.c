@@ -94,7 +94,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_actq", 102,
         {
-            "The event being posted is either null, invalid, or corrupt.",
+            "QActive post(...), the event being posted is either null, invalid, or corrupt.",
             "This typically means the event pointer was improperly retained\n"
             "after the event was returned to its event pool,\n"
             "i.e. used after the event was garbage collected.",
@@ -104,7 +104,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_actq", 190,
         {
-            "Target active object's queue is full.",
+            "QActive post(...), the target active object's queue is full.",
             "If posting an event to an active object using QF_NO_MARGIN, and the target queue is full,\n"
             "this assert will occur. The target AO might be overloaded OR a higher priority AO might\n"
             "be preventing this AO from executing.\n"
@@ -115,7 +115,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_actq", 202,
         {
-            "The event being LIFO posted is either null, invalid, or corrupt.",
+            "QActive postLIFO(...), the event being posted is either null, invalid, or corrupt.",
             "This typically means the event pointer was improperly retained\n"
             "after the event was returned to its event pool,\n"
             "i.e. used after the event was garbage collected.",
@@ -125,7 +125,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_actq", 201,
         {
-            "The target active object's queue is full.",
+            "QActive postLIFO(...), the target active object's queue is full.",
             "If LIFO posting an event to an active object, and the target queue is full,\n"
             "this assert will occur. The target AO might be overloaded OR a higher priority AO might\n"
             "be preventing this AO from executing.",
@@ -135,7 +135,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_actq", 310,
         {
-            "The final event was removed from the queue, yet internal data indicate a fault.",
+            "QActive get(...), an internal integrity check has failed.",
             "Possible data corruption.",
             NULL
         }
@@ -143,7 +143,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_actq", 400,
         {
-            "QF_getQueueMin, an error related to the selected priority input parameter.",
+            "QF getQueueMin, an error related to the selected priority input parameter.",
             "Most likely, a currently unused priority was queried.",
             "https://www.state-machine.com/qpc/class_q_f.html#a29692c0dcab731199b5beb5847484ab7"
         }
@@ -266,7 +266,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_mem", 100,
         {
-            "QPPool_init(...) parameters failed validation.",
+            "QPPool init(...) parameters failed validation.",
             "Check the pool size and ensure that at least one free block will fit,\n"
             "otherwise, see the documentation at the URL.",
             "https://www.state-machine.com/qpc/struct_q_m_pool.html#a477cb6d8f27af8db6cf6a155b331d996"
@@ -275,7 +275,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_mem", 110,
         {
-            "QPPool_init(...) parameters failed validation.",
+            "QPPool init(...) parameters failed validation.",
             "The desired pool size must allow for at least one rounded up block.",
             "https://www.state-machine.com/qpc/struct_q_m_pool.html#a477cb6d8f27af8db6cf6a155b331d996"
         }
@@ -283,7 +283,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_mem", 300,
         {
-            "QMPool_get(...) internal integrity check failure.",
+            "QMPool get(...) internal integrity check failure.",
             "Check for memory corruption related to objects allocated from or near this pool.",
             "https://www.state-machine.com/qpc/struct_q_m_pool.html#a312e8c7ec9a9a751578248f3ef3847ff"
         }
@@ -291,7 +291,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_mem", 302,
         {
-            "QMPool_get(...) internal integrity check failure.",
+            "QMPool get(...) internal integrity check failure.",
             "Check for memory corruption related to objects allocated from or near this pool.",
             "https://www.state-machine.com/qpc/struct_q_m_pool.html#a312e8c7ec9a9a751578248f3ef3847ff"
         }
@@ -299,7 +299,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_mem", 320,
         {
-            "QMPool_get(...) internal integrity check failure upon becoming empty.",
+            "QMPool get(...) internal integrity check failure upon becoming empty.",
             "Check for memory corruption related to objects allocated from or near this pool.",
             "https://www.state-machine.com/qpc/struct_q_m_pool.html#a312e8c7ec9a9a751578248f3ef3847ff"
         }
@@ -307,7 +307,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_mem", 330,
         {
-            "QMPool_get(...) internal integrity check failure when not empty.",
+            "QMPool get(...) internal integrity check failure when not empty.",
             "Check for memory corruption related to objects allocated from or near this pool.",
             "https://www.state-machine.com/qpc/struct_q_m_pool.html#a312e8c7ec9a9a751578248f3ef3847ff"
         }
@@ -315,7 +315,7 @@ static InternalMeta m_internal[] = {
     {
         "qf_mem", 200,
         {
-            "QMPool_put(...) failed internal integrity check.",
+            "QMPool put(...) failed internal integrity check.",
             "Check for memory corruption related to objects allocated from or near this pool.",
             "https://www.state-machine.com/qpc/struct_q_m_pool.html#a2fc0921a76c70b107e9f495a37c02681"
         }
