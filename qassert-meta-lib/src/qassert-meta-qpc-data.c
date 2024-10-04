@@ -196,6 +196,14 @@ QAssertMetaInternalItem m_qassert_meta_items[] = {
         }
     },
     {
+        "qf_dyn", 500,
+        {
+            "While creating a new reference, an event failed pool verification.",
+            "Check for memory corruption or stale event pointer being reused incorrectly.",
+            "https://www.state-machine.com/qpc/class_q_f.html#aee4449d368362c7fc1d1ddc258027d53"
+        }
+    },
+    {
         "qf_dyn", 602,
         {
             "While deleting an event reference, an event failed verification.",

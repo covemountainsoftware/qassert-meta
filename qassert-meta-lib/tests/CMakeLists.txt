@@ -9,6 +9,14 @@ else()
     message(STATUS "Found CppUTest version ${CPPUTEST_VERSION}")
 endif()
 
+if (CMS_ENABLE_QASSERT_META_QPC)
+    add_definitions(-DTESTS_FOR_QPC)
+elseif (CMS_ENABLE_QASSERT_META_QPCPP)
+    add_definitions(-DTESTS_FOR_QPCPP)
+else ()
+    message(FATAL_ERROR "Neither QPC nor QPCPP defined, fatal at this point.")
+endif ()
+
 set(TEST_APP_NAME qassert-meta-lib-tests)
 set(TEST_SOURCES
         main.cpp
