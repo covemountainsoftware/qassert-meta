@@ -20,52 +20,18 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#ifndef QASSERT_META_QASSERT_META_PRIVATE_H
+#define QASSERT_META_QASSERT_META_PRIVATE_H
+
 #include "qassert-meta.h"
-#include "qassert-meta-private.h"
-#include <stddef.h>
-#include <string.h>
 
-static UnknownQAssertCallback m_unknown_callback = NULL;
+typedef struct {
+    const char * module;
+    int id;
+    QAssertMetaDescription description;
+} QAssertMetaInternalItem;
 
-void QAssertMetaInit(void)
-{
-    m_unknown_callback = NULL;
-}
+//actual data at either qpc or qpcpp file, based on build options.
+extern QAssertMetaInternalItem m_qassert_meta_items[];
 
-void QAssertMetaRegisterUnknownCallback(UnknownQAssertCallback callback)
-{
-    m_unknown_callback = callback;
-}
-
-bool QAssertMetaGetDescription(const char * module, int id, QAssertMetaDescription* output)
-{
-    if ((NULL == output) || (NULL == module))
-    {
-        return false;
-    }
-
-    bool found = false;
-
-    //TODO: search internal for matching module/id pair
-    int i = 0;
-    while (m_qassert_meta_items[i].module != NULL)
-    {
-        if (m_qassert_meta_items[i].id == id)
-        {
-            if (0 == strcmp(module, m_qassert_meta_items[i].module))
-            {
-                found = true;
-                *output = m_qassert_meta_items[i].description;
-                break;
-            }
-        }
-        ++i;
-    }
-
-    if ((!found) && (m_unknown_callback != NULL))
-    {
-        found = m_unknown_callback(module, id, output);
-    }
-
-    return found;
-}
+#endif //QASSERT_META_QASSERT_META_PRIVATE_H
