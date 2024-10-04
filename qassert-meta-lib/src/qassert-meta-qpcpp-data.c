@@ -133,7 +133,7 @@ QAssertMetaInternalItem m_qassert_meta_items[] = {
     {
         "qf_dyn", 200,
         {
-            "Call to pollInit(...) exceeds the configured maximum.",
+            "Call to poolInit(...) exceeds the configured maximum.",
             "See QF_MAX_EPOOL. But do you really need more pools?",
             "https://www.state-machine.com/qpc/class_q_f.html#a1c4fc5636c2bc2e9d47e958aac05b8e1"
         }
@@ -141,7 +141,7 @@ QAssertMetaInternalItem m_qassert_meta_items[] = {
     {
         "qf_dyn", 201,
         {
-            "Each pool initialized by pollInit(...) must be initialized in increasing event size.",
+            "Each pool initialized by poolInit(...) must be initialized in increasing event size.",
             "Check the size of parameters used to initialize the pools and ensure they are\n"
             "sized as expected and in increasing size.",
             "https://www.state-machine.com/qpc/class_q_f.html#a1c4fc5636c2bc2e9d47e958aac05b8e1"
